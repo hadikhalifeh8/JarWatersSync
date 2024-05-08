@@ -54,30 +54,36 @@ class ViewCustomerOrders extends StatelessWidget {
                       CustomListTileCustomerOrders(
 
                         leading_: controller.data[index].id.toString(),
-                                    
-                                    // title_:controller.data[index].name?['ar'] ??"".toString(),
-                     title_: translateDateBase(controller.data[index].driverNameAr.toString(),
-                     controller.data[index].driverNameEn.toString(),
+
+                        customerId_: controller.data[index].customerId.toString(),
+    
+                     title_: translateDateBase(controller.data[index].customerNameAr.toString(),
+                     controller.data[index].customerNameEn.toString(),
                      ),
-                     
+
+                    driverId_: controller.data[index].customerId.toString(),
                     driver_:  translateDateBase(
-                                         controller.data[index].customerNameAr.toString(),
-                                         controller.data[index].customerNameEn.toString(),
-                             ),   
+                                         controller.data[index].driverNameAr.toString(),
+                                         controller.data[index].driverNameEn.toString(),
+                             ), 
+
+                   totalJarsdriver_: controller.data[index].totalJars.toString(),  
 
                                   
-                                    
+                    townId_: controller.data[index].townId.toString(),                                   
                   town_:  translateDateBase(
                                          controller.data[index].townNameAr.toString(),
                                          controller.data[index].townNameEn.toString(),
                              ),
 
+                    districtId_: controller.data[index].districtId.toString(),                                   
                   district_:  translateDateBase(
                                          controller.data[index].districtNameAr.toString(),
                                          controller.data[index].districtNameEn.toString(),
                              ),
 
 
+                    sereptaId_: controller.data[index].sereptaId.toString(),                                   
                   sereptaName_: translateDateBase(
                                          controller.data[index].sereptaNameAr.toString(),
                                          controller.data[index].sereptaNameEn.toString(),
@@ -89,16 +95,6 @@ class ViewCustomerOrders extends StatelessWidget {
 
         
 
-
-
-                                   
-
-                                    // onEdit: (){},
-          
-                                    //   iconDelete: Icons.delete_forever, 
-                                    //    onDelete: () { 
-                                    //   //  controller.deleteData(controller.towns[index].id.toString());
-                                    //     },
 
 
                                           ),

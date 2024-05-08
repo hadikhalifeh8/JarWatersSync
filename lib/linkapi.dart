@@ -14,12 +14,15 @@ class Applink {
 
 
 
-     static String getTownsData = "http://192.168.0.107/laravel/jarWater_Dashboard/public/api/viewTowns";
-     static String getDistrictsData = "http://192.168.0.107/laravel/jarWater_Dashboard/public/api/viewDistricts";
-     static String getSereptaData = "http://192.168.0.107/laravel/jarWater_Dashboard/public/api/viewSerepta";
-     static String getDriversData = "http://192.168.0.107/laravel/jarWater_Dashboard/public/api/viewDrivers";
-     static String getCustomersData = "http://192.168.0.107/laravel/jarWater_Dashboard/public/api/viewCustomers";
-     static String getCustomerOrderData = "http://192.168.0.107/laravel/jarWater_Dashboard/public/api/viewCustomerOrder";
+     static String getTownsData = "http://192.168.0.105/laravel/jarWater_Dashboard/public/api/viewTowns";
+     static String getDistrictsData = "http://192.168.0.105/laravel/jarWater_Dashboard/public/api/viewDistricts";
+     static String getSereptaData = "http://192.168.0.105/laravel/jarWater_Dashboard/public/api/viewSerepta";
+     static String getDriversData = "http://192.168.0.105/laravel/jarWater_Dashboard/public/api/viewDrivers";
+     static String getCustomersData = "http://192.168.0.105/laravel/jarWater_Dashboard/public/api/viewCustomers";
+     static String getCustomerOrderData = "http://192.168.0.105/laravel/jarWater_Dashboard/public/api/viewCustomerOrder";
+
+     static String syncData= "http://192.168.0.105/laravel/jarWater_Dashboard/public/api/insertDriverOrders";
+
 
 
 

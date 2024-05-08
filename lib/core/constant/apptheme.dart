@@ -22,7 +22,7 @@ ThemeData themeEnglish = ThemeData(
                               fontSize: 25.0
                    ),
 
-        backgroundColor: Colors.white12,
+        // backgroundColor: Colors.white12,
   
   
   
@@ -50,7 +50,7 @@ ThemeData themeEnglish = ThemeData(
                               fontSize: 14.0),
 
         ),
-        primarySwatch: Colors.red,
+        primarySwatch: Colors.blue,
       );
 
 

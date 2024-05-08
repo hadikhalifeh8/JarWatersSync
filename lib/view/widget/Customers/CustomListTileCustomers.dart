@@ -36,18 +36,18 @@ class CustomListTileCustomers extends StatelessWidget {
       child: Card(
                             child: ListTile(
                             title: Row(children: [
-                                     Text(title_),
+                                     Text(title_, style: const TextStyle(fontSize: 8.0),),
                             const Spacer(),
-                                     Text(driver_),
+                                     Text(driver_, style: const TextStyle(fontSize: 8.0),),
                             ],),
                             
 
                             leading: Text(leading_) ,
                             
                             subtitle: Row(children: [
-                                     Text(town_),
+                                     Text(town_, style: const TextStyle(fontSize: 8.0),),
                              const Spacer(flex: 1,),
-                                     Text(district_),
+                                     Text(district_, style: const TextStyle(fontSize: 8.0),),
                             ],),
                             
                             trailing:Text(phone_),

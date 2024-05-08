@@ -6,6 +6,11 @@ import 'package:jar_waters/view/screen/Admin/home.dart';
 import 'package:jar_waters/view/screen/CustomerOrders/customerOrders.dart';
 import 'package:jar_waters/view/screen/Customers/customers.dart';
 import 'package:jar_waters/view/screen/Districts/Districts.dart';
+import 'package:jar_waters/view/screen/DriverOrders/add.dart';
+import 'package:jar_waters/view/screen/DriverOrders/edit.dart';
+import 'package:jar_waters/view/screen/DriverOrders/homePageOrders.dart';
+import 'package:jar_waters/view/screen/DriverOrders/view.dart';
+import 'package:jar_waters/view/screen/Drivers/Login-Driver.dart';
 import 'package:jar_waters/view/screen/Drivers/drivers.dart';
 import 'package:jar_waters/view/screen/Serepta/serepta.dart';
 import 'package:jar_waters/view/screen/Towns/towns.dart';
@@ -60,6 +65,21 @@ List<GetPage<dynamic>>? routes = [
      GetPage(name:  AppRoute.customerss, page: () => const ViewCustomers(),),
      GetPage(name:  AppRoute.customerOrderss, page: () => const ViewCustomerOrders(),),
      GetPage(name:  AppRoute.homeAdminPagess, page: () => const HomeAdminPage(),),
+    //  GetPage(name:  AppRoute.homeOrdersPagess, page: () => const HomePageOrders(),),
+
+
+
+
+      GetPage(name: AppRoute.driverLogin, page: () => const DriverLogin()),
+      GetPage(name: AppRoute.orderadd, page: () => const AddOrder()),
+
+
+         GetPage(name: AppRoute.ordersViewBydriverid, page: () => const ViewOrdersByDrivers()),
+         GetPage(name: AppRoute.orderedits, page: () => const EditOrder()),
+
+          GetPage(name: AppRoute.homeOrdersPagess, page: () => const DriversOrdersHomePage()),
+
+       
 
 
 

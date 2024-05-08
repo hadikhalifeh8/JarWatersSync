@@ -28,19 +28,19 @@ valiInput(String value, int min, int max, String type){
     
      if(!GetUtils.isPhoneNumber(value))
         {
-          return "not valid phone number";
+          return "not_valid_phone_number";
         }
   }
 
     if(value.isEmpty)
   {
-    return "can't be empty";
+    return "cant_be_empty".tr;
   }
 
   if(value.length < min)
   {
     return "value can't be less than $min";
-  }
+  } 
 
     if(value.length > max)
   {

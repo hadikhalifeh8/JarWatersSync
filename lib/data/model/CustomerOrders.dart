@@ -3,6 +3,10 @@ class CustomerOrderModel {
   int? driverId;
   String? driverNameAr;
   String? driverNameEn;
+
+  String? totalJars;
+
+
   int? customerId;
   String? customerNameAr;
   String? customerNameEn;
@@ -25,6 +29,11 @@ class CustomerOrderModel {
       this.driverId,
       this.driverNameAr,
       this.driverNameEn,
+
+      this.totalJars,
+
+
+
       this.customerId,
       this.customerNameAr,
       this.customerNameEn,
@@ -47,6 +56,11 @@ class CustomerOrderModel {
     driverId = json['driver_id'];
     driverNameAr = json['driver_name_ar'];
     driverNameEn = json['driver_name_en'];
+
+    totalJars = json['totalJars'];
+
+
+
     customerId = json['customer_id'];
     customerNameAr = json['customer_name_ar'];
     customerNameEn = json['customer_name_en'];
@@ -71,6 +85,11 @@ class CustomerOrderModel {
     data['driver_id'] = this.driverId;
     data['driver_name_ar'] = this.driverNameAr;
     data['driver_name_en'] = this.driverNameEn;
+
+    data['totalJars'] = this.totalJars;
+
+
+
     data['customer_id'] = this.customerId;
     data['customer_name_ar'] = this.customerNameAr;
     data['customer_name_en'] = this.customerNameEn;

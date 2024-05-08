@@ -15,6 +15,79 @@ class MyTranslation extends Translations {
           "View_All_Customers":"الزبائن",
           "View_All_Serepta":"جره",
           "View_All_Customer_Orders":"فواتير الزبائن",
+          "Add_Order" : "إضافة فاتوره جديده",
+
+
+          "qty_jar_in": "عدد الجرائر المطلوبه",
+          "jar_in": "عدد التنزيل",
+
+           "qty_jar_out" : "عدد الجرائر المرتجعه",
+            "jar_out" : "عدد المرتجع",
+
+            "qty_previous_jars" : "عدد الجرائر السابقه",
+            "previous_jars" : "الجرائر السابقه",
+
+            "total_qty_Jar" : "عدد الجرائر",
+            "total_Jar" : "مجموع الجرائر",
+            "price_per_jar" : "سعر الجره",
+
+            "total_price_jar" : "مجموع السعر",
+
+            "Paid" : "الدفع",
+
+            "debt" : "الديون",
+
+            "Total_Price" : "السعر الكلي",
+
+            "Order_Now" : "أدخل المعلومات",
+            "Update_Order" : "تعديل المعلومات",
+
+            "Old_debt" : "ديون سابقه",
+            "New_debt" : "ديون جديده",
+
+             "Customers" :  "الزبائن", 
+            "Enter_Customers" : "أدجل الزبائن",
+         "Updates_Order": " تعديل معلومات الفاتوره",
+
+         "name_already_exists" : "إسم الزيون موجود سابقا",
+         "Warning" : "تحذير",
+
+         "cant_be_empty" : "لا يمكن أن يكون فارغ",
+         "not_valid_phone_number" : "رقم الهاتف غير صالح",
+
+         "Orders_Dashboard" : "لوحة تحكم الطلبات",
+         "Admin_Page" : "الصفحه الرئيسيه",
+         "Login_Driver" : "تسجيل الدخول للسائق",
+
+         "Driver_Login" : "تسجيل دخول السائق",
+         "Phone": "الهاتف",
+         "Enter_phone_number" : "أدخل رقم الهاتف",
+
+         "Password" : "كلمة المرور",
+          "Enter_password" : "أدخل كلمة المرور",
+
+          // "value_cant_be_less_than" : "لا يمكن أن تكون القيمة أقل من",
+          "Submit" : "الدخول",
+
+          "Success" : "نجاح",
+          "Login_Success" : "تم الدخول بنجاح",
+
+          "Phone_or_Password_not_correct" : "الهاتف أو كلمة المرور غير صحيحة",
+          "Order_Updated_Successfully" : "تم تحديث الطلب بنجاح",
+          "Data_added_Successfully" : "تم إضافة المعلومات بنجاح",
+
+          "View_All_Orders" : "عرض جميع الطلبات",
+          "Search" : "...بحث",
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -71,6 +144,85 @@ class MyTranslation extends Translations {
           "View_All_Customers":"Customers",
           "View_All_Serepta":"Jar",
           "View_All_Customer_Orders":"Customer Orders",
+          "Add_Order" : "Add New Order",
+          "Update_Order": "Update Order",
+
+
+          "qty_jar_in": "qty_jar_in",
+          "jar_in": "jar_in",
+
+          "qty_jar_out" : "qty_jar_out",
+          "jar_out" : "jar_out",
+
+           "qty_previous_jars" : "qty_previous_jars",
+            "previous_jars" : "previous_jars",
+
+            "total_qty_Jar" : "total qty Jar",
+            "total_Jar" : "total Jar",
+
+            "price_per_jar" : "price per jar",
+
+            "total_price_jar" : "Total Price Jar",
+
+            "Paid" : "Paid",
+
+            "debt" : "debt",
+
+            "Total_Price" : "Total Price",
+
+            "Order_Now" : "Order Now",
+
+            "Updates_Order" : "Update Order",
+
+            "Old_debt" : "Old debt",
+            "New_debt" : "New debt",
+
+            "Customers" :  "Customers", 
+            "Enter_Customers" : "Enter Customers",
+
+         "name_already_exists" : "Customer name already exists",
+         "Warning" : " Warning",
+
+         "cant_be_empty" : "can't be empty",
+         "not_valid_phone_number" : "not valid phone number",
+
+         "Orders_Dashboard" : "Orders Dashboard",
+         "Admin_Page" : "Admin Page",
+         "Login_Driver" : "Login Driver",
+
+         "Driver_Login" : "Driver Login",
+          "Phone": "Phone",
+          "Enter_phone_number" : "Enter phone number",
+          
+         "Password" : "Password",
+          "Enter_password" : "Enter password",
+
+          "value_cant_be_less_than" : "value can't be less than",
+          "Submit" : "Submit",
+
+          "Success" : "Success",
+          "Login_Success" : "Login Success",
+
+          
+          "Phone_or_Password_not_correct" : "Phone or Password not correct",
+
+          "Order_Updated_Successfully" : "Order Updated Successfully",
+          "Data_added_Successfully" : "Data added Successfully",
+
+          "View_All_Orders" : "View All Orders",
+          "Search" : "Search...",
+
+
+
+
+
+            
+
+
+
+
+
+
 
           
 

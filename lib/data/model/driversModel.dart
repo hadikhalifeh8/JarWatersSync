@@ -5,6 +5,8 @@ class DriversModel {
    Map<String, String>? name; // Change type to Map<String, String>
   String? phone;
   String? password;
+  String? totalJars;
+
   String? createdAt;
   String? updatedAt;
 
@@ -13,6 +15,7 @@ class DriversModel {
       this.name,
       this.phone,
       this.password,
+      this.totalJars,
       this.createdAt,
       this.updatedAt});
 
@@ -30,6 +33,8 @@ class DriversModel {
   
     phone = json['phone'];
     password = json['password'];
+    totalJars = json['totalJars'];
+
     createdAt = json['created_at'];
     updatedAt = json['updated_at'];
   }
@@ -42,6 +47,8 @@ class DriversModel {
 
     data['phone'] = this.phone;
     data['password'] = this.password;
+    data['totalJars'] = this.totalJars;
+
     data['created_at'] = this.createdAt;
     data['updated_at'] = this.updatedAt;
     return data;

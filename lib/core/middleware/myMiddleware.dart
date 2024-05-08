@@ -15,24 +15,24 @@ class MyMidlleware extends GetMiddleware{
   RouteSettings? redirect(String? route) {
 
 
-        if(myservices.sharedPreferences.getString("step") == "4"){
-        return const RouteSettings(name: AppRoute.ordersHomePage);
-    }
+    //     if(myservices.sharedPreferences.getString("step") == "4"){
+    //     return const RouteSettings(name: AppRoute.orderadd);
+    // }
 
-        if(myservices.sharedPreferences.getString("step") == "3"){
-        return const RouteSettings(name: AppRoute.driverLogin);
-    }
+    //     if(myservices.sharedPreferences.getString("step") == "3"){
+    //     return const RouteSettings(name: AppRoute.driverLogin);
+    // }
 
 
 
 
     // step 2 الأولويه لل 
      if(myservices.sharedPreferences.getString("step") == "2"){
-        return const RouteSettings(name: AppRoute.home);
+        return const RouteSettings(name: AppRoute.ordersViewBydriverid);
     }
   
     if(myservices.sharedPreferences.getString("step") == "1"){
-        return const RouteSettings(name: AppRoute.townss);
+        return const RouteSettings(name: AppRoute.homeOrdersPagess);
     }
 
     

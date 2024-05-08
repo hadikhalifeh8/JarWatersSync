@@ -6,6 +6,8 @@ class CustomListTileDrivers extends StatelessWidget {
   final String title_;
   final String phone;
     final String password;
+    final String totalJars_;
+
 
 
   final void Function()? onEdit;
@@ -19,6 +21,8 @@ class CustomListTileDrivers extends StatelessWidget {
   required this.title_,
    required this.phone,
    required this.password,
+   required this.totalJars_,
+
    
 
 
@@ -41,7 +45,11 @@ class CustomListTileDrivers extends StatelessWidget {
                             ),
                             
                             leading: Text(leading_) ,
-                            subtitle: Text(password),
+                            subtitle: Row(children: [
+                              Text(password),
+                              Spacer(), 
+                              Text(totalJars_),
+                            ],),
                             
                             trailing: Row( 
                                mainAxisSize: MainAxisSize.min,

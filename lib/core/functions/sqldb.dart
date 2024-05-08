@@ -71,6 +71,9 @@ Future<Database?> initialDB() async {
         "name" TEXT ,
         "phone" TEXT,
         "password" TEXT ,
+        "totalJars" TEXT BY DEFAULT "0",
+       
+
 
         "created_at" TEXT,
         "updated_at" TEXT
@@ -175,20 +178,21 @@ Future<Database?> initialDB() async {
         "id" INTEGER ,
         
         "driver_id" INTEGER ,
-        "driver_name_ar" TEXT,
-        "driver_name_en" TEXT,
+        "driver_name_ar" TEXT ,
+        "driver_name_en" TEXT ,
+        "totalJars" TEXT ,
 
         "customer_id" INTEGER ,
-        "customer_name_ar" TEXT,
-        "customer_name_en" TEXT,
+        "customer_name_ar" TEXT ,
+        "customer_name_en" TEXT ,
 
         "town_id" INTEGER ,
-        "town_name_ar" TEXT,
-        "town_name_en" TEXT,
+        "town_name_ar" TEXT ,
+        "town_name_en" TEXT ,
 
         "district_id" INTEGER ,
-        "district_name_ar" TEXT,
-        "district_name_en" TEXT,
+        "district_name_ar" TEXT ,
+        "district_name_en" TEXT ,
 
         "serepta_id" INTEGER ,
         "serepta_name_ar" TEXT,
@@ -218,31 +222,36 @@ Future<Database?> initialDB() async {
           batch.execute('''  
       CREATE TABLE "orders" (
         "id" INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT ,
-        "day_id" INTEGER NOT NULL,
-        "driver_id" INTEGER NOT NULL,
-        "customer_id" INTEGER NOT NULL,
-        "town_id" INTEGER NOT NULL,
-        "district_id" INTEGER NOT NULL,
+
+        "driver_id" INTEGER ,
+         "driver_name" TEXT,
+         "totalJars" TEXT ,
          
-        "jar_id" INTEGER NULL REFERENCES jars (id),
-        "bottle_id" INTEGER NULL REFERENCES bottels (id) ,
+        "customer_id" INTEGER ,
+        "customer_name" TEXT,
         
-        "qty_of_bottles" INTEGER DEFAULT 0,
-        "price_per_bottel" FLOAT DEFAULT 0.0,
-        "tolal_price_bottel" FLOAT DEFAULT 0.0,
+        "town_id" INTEGER ,
+         "town_name" TEXT,
+       
+        "district_id" INTEGER ,
+         "district_name" TEXT,
+         
+        "serepta_id" INTEGER ,
+        "serepta_name" TEXT,
+      
+        "srpta_price_Lira" TEXT,
+        "srpta_price_Dollar" TEXT,
+      
 
         "qty_jar_in" INTEGER DEFAULT 0,
         "qty_jar_out" INTEGER DEFAULT 0,
         "qty_previous_jars" INTEGER  DEFAULT 0,
-
         "total_jar" INTEGER DEFAULT 0,
 
 
         "price_per_jar" FLOAT DEFAULT 0.0,
         "total_price_jars" FLOAT DEFAULT 0.0,
        
-        
-
 
         "old_debt" FLOAT DEFAULT 0.0,
         "new_debt" FLOAT DEFAULT 0.0,
@@ -250,12 +259,18 @@ Future<Database?> initialDB() async {
         "paid" FLOAT DEFAULT 0.0,
         "total_price" FLOAT DEFAULT 0.0,
 
+        created_at TEXT,
+        "updated_at" TEXT,
 
-         "FOREIGN KEY (day_id) REFERENCES days (id) ON DELETE NO ACTION ON UPDATE NO ACTION,"
+
+
+
          "FOREIGN KEY (driver_id) REFERENCES drivers (id) ON DELETE NO ACTION ON UPDATE NO ACTION,"
          "FOREIGN KEY (customer_id) REFERENCES customers (id) ON DELETE NO ACTION ON UPDATE NO ACTION,"
          "FOREIGN KEY (town_id) REFERENCES towns (id) ON DELETE NO ACTION ON UPDATE NO ACTION,"
          "FOREIGN KEY (district_id) REFERENCES districts (id) ON DELETE NO ACTION ON UPDATE NO ACTION,"
+         "FOREIGN KEY (serepta_id) REFERENCES serepta (id) ON DELETE NO ACTION ON UPDATE NO ACTION,"
+
         
       )
      ''');
@@ -323,37 +338,37 @@ _onUpgrade(Database db, int oldVersion, int newVersion)async {
 
 
 
-    //         // الفاتوره
-    //       await  db.execute('''  
-    //   CREATE TABLE "orders" (
-    //     "id" INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT ,
-    //     "day_id" INTEGER NOT NULL,
-    //     "driver_id" INTEGER NOT NULL,
-    //     "customer_id" INTEGER NOT NULL,
-    //     "town_id" INTEGER NOT NULL,
-    //     "district_id" INTEGER NOT NULL,
-    //     "company_id" INTEGER NOT NULL,
-    //     "bottle_id" INTEGER NOT NULL,
-    //     "qty_of_bottles" INTEGER BY DEFAULT "0" NOT NULL,
-    //     "price" FLOAT BY DEFAULT "0" NOT NULL,
-    //     "qty_jar_in" INTEGER BY DEFAULT "0" NOT NULL,
-    //     "qty_jar_out" INTEGER BY DEFAULT "0" NOT NULL,
-    //     "total_jar" INTEGER BY DEFAULT "0" NOT NULL,
-    //     "total_price" FLOAT BY DEFAULT "0" NOT NULL,
+            // الفاتوره
+          await  db.execute('''  
+      CREATE TABLE "orders" (
+        "id" INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT ,
+        "day_id" INTEGER NOT NULL,
+        "driver_id" INTEGER NOT NULL,
+        "customer_id" INTEGER NOT NULL,
+        "town_id" INTEGER NOT NULL,
+        "district_id" INTEGER NOT NULL,
+        "company_id" INTEGER NOT NULL,
+        "bottle_id" INTEGER NOT NULL,
+        "qty_of_bottles" INTEGER BY DEFAULT "0" NOT NULL,
+        "price" FLOAT BY DEFAULT "0" NOT NULL,
+        "qty_jar_in" INTEGER BY DEFAULT "0" NOT NULL,
+        "qty_jar_out" INTEGER BY DEFAULT "0" NOT NULL,
+        "total_jar" INTEGER BY DEFAULT "0" NOT NULL,
+        "total_price" FLOAT BY DEFAULT "0" NOT NULL,
 
 
 
 
 
-    //      "FOREIGN KEY (day_id) REFERENCES days (id) ON DELETE NO ACTION ON UPDATE NO ACTION,"
-    //      "FOREIGN KEY (driver_id) REFERENCES drivers (id) ON DELETE NO ACTION ON UPDATE NO ACTION,"
-    //      "FOREIGN KEY (customer_id) REFERENCES customers (id) ON DELETE NO ACTION ON UPDATE NO ACTION,"
-    //      "FOREIGN KEY (town_id) REFERENCES towns (id) ON DELETE NO ACTION ON UPDATE NO ACTION,"
-    //      "FOREIGN KEY (district_id) REFERENCES district (id) ON DELETE NO ACTION ON UPDATE NO ACTION,"
-    //      "FOREIGN KEY (company_id) REFERENCES company (id) ON DELETE NO ACTION ON UPDATE NO ACTION,"
-    //      "FOREIGN KEY (bottle_id) REFERENCES bottels (id) ON DELETE NO ACTION ON UPDATE NO ACTION,"
-    //   )
-    //  ''');
+         "FOREIGN KEY (day_id) REFERENCES days (id) ON DELETE NO ACTION ON UPDATE NO ACTION,"
+         "FOREIGN KEY (driver_id) REFERENCES drivers (id) ON DELETE NO ACTION ON UPDATE NO ACTION,"
+         "FOREIGN KEY (customer_id) REFERENCES customers (id) ON DELETE NO ACTION ON UPDATE NO ACTION,"
+         "FOREIGN KEY (town_id) REFERENCES towns (id) ON DELETE NO ACTION ON UPDATE NO ACTION,"
+         "FOREIGN KEY (district_id) REFERENCES district (id) ON DELETE NO ACTION ON UPDATE NO ACTION,"
+         "FOREIGN KEY (company_id) REFERENCES company (id) ON DELETE NO ACTION ON UPDATE NO ACTION,"
+         "FOREIGN KEY (bottle_id) REFERENCES bottels (id) ON DELETE NO ACTION ON UPDATE NO ACTION,"
+      )
+     ''');
 }
 
 
@@ -623,8 +638,8 @@ Future<int> syncData(String table, List<Map<String, dynamic>> dataList, Conflict
       whereArgs: [data['id']], // Assuming 'id' exists in the data entry
     );
 
-    if (existingRows.isEmpty) {
-      // Row does not exist, insert it into the database
+    if (existingRows.isNotEmpty) {
+      // Row exists, update it in the database
       
       // Handle 'name' field if it's a Map<String, String>
       if (data['name'] is Map<String, String>) {
@@ -639,7 +654,15 @@ Future<int> syncData(String table, List<Map<String, dynamic>> dataList, Conflict
         data['name'] = nameString;
       }
 
-      // Insert the new data into the database
+      // Update the existing data in the database
+      await mydb.update(
+        table,
+        data,
+        where: 'id = ?', // Assuming 'id' is the primary key
+        whereArgs: [data['id']], // Assuming 'id' exists in the data entry
+      );
+    } else {
+      // Row does not exist, insert it into the database
       await mydb.insert(table, data, conflictAlgorithm: conflictAlgorithm);
       insertedRowCount++;
     }

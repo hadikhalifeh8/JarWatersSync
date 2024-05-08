@@ -64,6 +64,7 @@ class ViewDrivers extends StatelessWidget {
                                     
                                     phone: controller.data[index].phone.toString(),
                                     password: controller.data[index].password.toString(),
+                                    totalJars_: controller.data[index].totalJars.toString(),
 
 
                                     // onEdit: (){},

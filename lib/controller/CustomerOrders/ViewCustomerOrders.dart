@@ -95,6 +95,7 @@ if (response['status'] == "success") {
   List datalist = response['data'];
   List<CustomerOrderModel> customerOrdersList = datalist.map((e) => CustomerOrderModel.fromJson(e as Map<String, dynamic>)).toList();
   data.addAll(customerOrdersList);
+  update();
 
   // Iterate over the data and insert into the SQLite database
   await sqlDb.syncData('customers_orders', customerOrdersList.map((e) => e.toJson()).toList(), ConflictAlgorithm.replace);

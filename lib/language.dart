@@ -22,15 +22,15 @@ class Language extends GetView<LocalController> {
            Text("1".tr, style: Theme.of(context).textTheme.headline1,),
           const SizedBox(height: 20.0,),
           CustomButtonLanguage(textbuttonName: "Ar",
-          onPressed: (){ 
+          onPressed: (){
                        controller.changeLanguage("ar");
-                       Get.toNamed(AppRoute.homeAdminPagess);
+                       Get.toNamed(AppRoute.homeOrdersPagess);
           }),
           const SizedBox(height: 5.0,),
           CustomButtonLanguage(textbuttonName: "En",
           onPressed: (){
             controller.changeLanguage("en");
-            Get.toNamed(AppRoute.homeAdminPagess);
+            Get.toNamed(AppRoute.homeOrdersPagess);
           }
           ),
           

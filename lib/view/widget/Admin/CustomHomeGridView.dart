@@ -15,10 +15,10 @@ class CustomHomeGridView extends StatelessWidget {
      
       child: Container(margin: EdgeInsets.all(5.0),
                
-               child: Column(mainAxisSize: MainAxisSize.min,
+               child: Column(
                 children: [
                                   Image.asset(image, height: 90.0,width: 150.0,),
-                                  Text(title)
+                                  Text(title, style: const TextStyle(color: Colors.black,fontSize: 12, fontWeight: FontWeight.bold),)
                 ],),
                 
                 ),

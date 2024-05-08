@@ -1,8 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:jar_waters/controller/DriverOrders/viewController.dart';
+import 'package:jar_waters/controller/Drivers/ViewDriversController.dart';
 import 'package:jar_waters/core/constant/imageasset.dart';
 import 'package:jar_waters/core/constant/routes.dart';
 import 'package:jar_waters/view/widget/Admin/CustomHomeGridView.dart';
+import 'package:jar_waters/view/widget/DriverOrders/CustomButton.dart';
+import 'package:jar_waters/view/widget/DriverOrders/CustomTextFormOrdersForINTEGERS.dart';
 
 
 class HomeAdminPage extends StatelessWidget {
@@ -12,11 +16,23 @@ class HomeAdminPage extends StatelessWidget {
   Widget build(BuildContext context) {
 
   //  LoginController controller = Get.put(LoginController());
+    ViewOrdersController controller = Get.put(ViewOrdersController());
+    // ViewDriversController driversController = Get.put(ViewDriversController());
+
+
 
     return Scaffold(
       appBar: AppBar(
-              title:  Text("Dashboard".tr, style: Theme.of(context).textTheme.headline1,),
+              title: 
+               Row(
+                 children: [
+                   Text("Dashboard".tr, style: Theme.of(context).textTheme.headline1,),
+                   const Spacer(),
+                   IconButton(onPressed: (){controller.logout();}, icon: const Icon(Icons.power_settings_new))
+                 ],
+               ),
         centerTitle: true,    
+        
         ),
 
         body: ListView(children: [
@@ -40,7 +56,38 @@ class HomeAdminPage extends StatelessWidget {
 
             ],
           ),
-          const SizedBox(height: 30.0,),
+        //   const SizedBox(height: 30.0,),
+
+        //           CustomTextFormOrdersForINTEGERS(
+        //                                        hintText_: "Numbers_of_jars_Fill".tr,
+        //                                        label_: "Numbers_of_jars_Fill".tr,
+        //                                        icon_: Icons.abc,
+        //                                        inputFormatters_: true,
+        //                                        isNumber: true,
+        //                                        readOnly_: false,
+        //                                        mycontroller: driversController.numbersOfFillJars,
+        //                                     //   onChanged_: driversController.getNumberOfJarsFill(),
+                         
+                         
+        //                                       ),
+
+        //  const SizedBox(height: 15.0,),
+
+        //           CustomTextFormOrdersForINTEGERS(
+        //                                        hintText_: "Numbers_of_jars_empty".tr,
+        //                                        label_: "Numbers_of_jars_empty".tr,
+        //                                        icon_: Icons.abc,
+        //                                        inputFormatters_: true,
+        //                                        isNumber: true,
+        //                                        readOnly_: true,
+                         
+                         
+        //                                       ),
+
+
+
+
+
 
 
           // InkWell(

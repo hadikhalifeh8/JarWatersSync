@@ -1,7 +1,9 @@
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:jar_waters/core/class/statusRequest.dart';
 import 'package:jar_waters/core/functions/handlingDataController.dart';
 import 'package:jar_waters/core/functions/sqldb.dart';
+import 'package:jar_waters/core/services/services.dart';
 import 'package:jar_waters/data/datasource/remote/drivers_data.dart';
 import 'package:jar_waters/data/datasource/remote/serepta_data.dart';
 import 'package:jar_waters/data/model/SereptaModels.dart';
@@ -12,12 +14,16 @@ import 'package:sqflite/sqflite.dart';
 class ViewDriversController extends GetxController{
  
   SqlDb sqlDb = SqlDb();
+   Myservices myservices = Get.find();
+
   List<DriversModel> data = [];
 
   StatusRequest statusRequest = StatusRequest.none;
 
   DriversModel? driversModel;
   DriversData driversData = DriversData(Get.find());
+
+  //  TextEditingController numbersOfFillJars= TextEditingController();
 
 
 
@@ -116,10 +122,25 @@ if (response['status'] == "success") {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
   @override
   void onInit() {
    //getData();
    getDataFromOnlineToOffLine();
+
+   
     super.onInit();
   }
 }

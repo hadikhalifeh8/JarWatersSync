@@ -20,6 +20,17 @@ class AppRoute {
   static const String customerss = "/customerss";
   static const String customerOrderss = "/customerOrderss";
   static const String homeAdminPagess = "/homeAdminPagess";
+   static const String homeOrdersPagess = "/homeOrdersPagess";
+  static const String orderadd = "/orderadd";
+
+  static const String ordersViewBydriverid = "/ordersViewBydriverid";
+  static const String orderedits = "/orderedits";
+  static const String driversCalculateJarss = "/driversCalculateJarss";
+
+
+
+
+
 
 
 
@@ -70,11 +81,11 @@ class AppRoute {
 
 
    // Orders
-  static const String ordersHomePage = "/ordersHomePage";
+  // static const String ordersHomePage = "/ordersHomePage";
   static const String driverLogin = "/driverLogin";
-  static const String orderadd = "/orderadd";
-  static const String orderedit = "/orderedit";
-  static const String ordersViewBydriverid = "/ordersViewBydriverid";
+  // static const String orderadd = "/orderadd";
+  // static const String orderedit = "/orderedit";
+  // static const String ordersViewBydriverid = "/ordersViewBydriverid";
 
 
   
